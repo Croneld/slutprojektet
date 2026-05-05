@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Croneld - Professionellt CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-light" id="mainNav" aria-label="Huvudmeny">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Victor</a>
+                
+                <div class="d-flex align-items-center ms-auto me-2">
+                    <button class="btn btn-sm btn-outline-secondary me-1" onclick="changeFontSize('increase')" title="Större text">A+</button>
+                    <button class="btn btn-sm btn-outline-secondary me-3" onclick="changeFontSize('decrease')" title="Mindre text">A-</button>
+                    <button class="btn btn-sm btn-dark" id="darkModeToggle">Dark Mode</button>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Visa meny">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link px-3 py-2" href="#hem">Hem</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 py-2" href="#om-mig">Om mig</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 py-2" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 py-2" href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hem" aria-labelledby="hem-title">
+            <div class="container">
+                <div class="row align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-md-6 text-center text-md-start mt-4 mt-md-0">
+                        <h1 id="hem-title" class="display-4 fw-bold">Hej! Jag är Victor Croneld</h1>
+                        <p class="lead">Välkommen till min digitala portfolio.</p>
+                        <a href="#portfolio" class="btn btn-primary btn-lg mt-3">Se mina projekt</a>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <figure class="mb-0 hero-img-container">
+                            <img src="img/profilbild.jpg" alt="Victor Croneld" class="img-fluid rounded-circle shadow-lg profile-img">
+                            <figcaption class="visually-hidden">Profilbild av Victor Croneld</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="om-mig" aria-labelledby="om-mig-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 id="om-mig-title" class="fw-bold mb-4">Om mig</h2>
+                        <p>Jag är en driven studerande som just nu läser kursen Webbutveckling 2, under mitt andra år av tekniklinjen på gymnasiet. Mitt fokus ligger på att skapa moderna, användarvänliga och tekniskt stabila webblösningar. Jag föredrar cleana designer och logisk kodstruktur, då jag anser att en bra användarupplevelse börjar med ett välplanerat och strukturerat fundament.</p>
+                        <p>Min resa i Webb 2 har gett mig en fördjupad förståelse för hur man går från statiska sidor till mer dynamiska och responsiva system. Under kursens gång har jag rört mig från grundläggande HTML och CSS till att bemästra ramverk som Bootstrap 5 och JavaScript för att skapa interaktivitet. Jag har lärt mig vikten av att arbeta med semantisk kod för SEO och tillgänglighet, samt hur man metodiskt testar och optimerar prestanda via verktyg som Google Lighthouse. Denna portfolio är ett bevis på min utveckling och min förmåga att kombinera visuell design med teknisk funktionalitet.</p>
+                    </div>
+                    <aside class="col-md-4 mt-5 mt-md-0" aria-labelledby="skills-title">
+                        <div class="p-4 bg-light rounded shadow-sm border">
+                            <h3 id="skills-title" class="h4 fw-bold">Färdigheter</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="py-1">HTML5 & Semantisk kod</li>
+                                <li class="py-1">CSS3 & Bootstrap 5</li>
+                                <li class="py-1">JavaScript</li>
+                                <li class="py-1">Responsiv Design</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="bg-light" aria-labelledby="portfolio-title">
+            <div class="container">
+                <h2 id="portfolio-title" class="fw-bold text-center mb-5">Min Portfolio</h2>
+                <div class="row g-4">
+                    <article class="col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/P2_sc.png" class="card-img-top" alt="Skärmdump på Projekt 2">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold">Projekt 2: Quiz om sociala medier</h3>
+                                <p class="card-text">
+                                    Ett interaktivt quiz byggt med Bootstrap 5 och JavaScript. 
+                                    Här fokuserade jag på att skapa en strukturerad 3-kolumns-layout som är helt responsiv. 
+                                    Genom projektet lärde jag mig att hantera formulärdata och skapa omedelbar feedback till användaren via logik i JS.
+                                </p>
+                                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProjekt2">
+                                    Läs arbetsprocessen
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="img/P3_sc.png" class="card-img-top" alt="Skärmdump på Projekt 3">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold">Projekt 3: Webbregler och lagar</h3>
+                                <p class="card-text">
+                                    En omfattande guide om digital etik och juridik. Webbplatsen har fokus på tillgänglighet och hög prestanda. 
+                                    Jag implementerade funktioner för mörkt läge och justerbar textstorlek med hjälp av JavaScript för att förbättra användarupplevelsen.
+                                </p>
+                                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalProjekt3">
+                                    Läs arbetsprocessen
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" aria-labelledby="kontakt-title">
+            <div class="container">
+                <div class="mx-auto" style="max-width: 600px;">
+                    <h2 id="kontakt-title" class="fw-bold text-center mb-4">Kontakta mig</h2>
+                    <form action="https://formspree.io/f/mnjlelyl" method="POST" id="contactForm" class="bg-white p-4 rounded shadow-sm border">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Namn</label>
+                            <input type="text" class="form-control border" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">E-post</label>
+                            <input type="email" class="form-control border" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Meddelande</label>
+                            <textarea class="form-control border" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Skicka meddelande</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Victor | Webb 2 Slutprojekt</p>
+            <address class="mt-3">
+                <a href="https://github.com/Croneld?tab=repositories" target="_blank" rel="noopener" class="text-white me-3 text-decoration-none border-bottom border-secondary">GitHub</a>
+                <a href="https://se.linkedin.com/" target="_blank" rel="noopener" class="text-white text-decoration-none border-bottom border-secondary">LinkedIn</a>
+            </address>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalProjekt2" tabindex="-1" aria-labelledby="modal2Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content text-dark">
+          <div class="modal-header border-0">
+            <h2 class="modal-title h5 fw-bold" id="modal2Title">Arbetsprocess: Quiz-projektet</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Stäng"></button>
+          </div>
+          <div class="modal-body p-4">
+            <h3 class="h6 fw-bold">Planering & Design</h3>
+            <p>Målet var en ren och strukturerad layout med 12 frågor fördelade på ett jämnt rutnät. Jag använde en blå färgpalett för att skapa ett lugnt och välbekant intryck för användaren.</p>
+            <h3 class="h6 fw-bold">Utmaningar</h3>
+            <p>Den största utmaningen var att få "lådorna" för frågorna att hålla samma höjd trots att textmängden varierade. Jag löste detta genom att arbeta aktivt med marginaler och Bootstraps grid-system.</p>
+            <h3 class="h6 fw-bold">Testning</h3>
+            <p>Sidan testades genom en manuell rättningsfunktionen och genom webbläsarens inspektionsverktyg för att verifiera responsivitet för mobiler.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalProjekt3" tabindex="-1" aria-labelledby="modal3Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content text-dark">
+          <div class="modal-header border-0">
+            <h2 class="modal-title h5 fw-bold" id="modal3Title">Arbetsprocess: Webbregler och lagar</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Stäng"></button>
+          </div>
+          <div class="modal-body p-4">
+            <h3 class="h6 fw-bold">Syfte & Teknikval</h3>
+            <p>Syftet var att skapa en pedagogisk guide om lagar som GDPR och Copyright. Jag använde Bootstrap 5 för responsivitet och JavaScript för dynamiska funktioner som Dark Mode och textskalning.</p>
+            <h3 class="h6 fw-bold">Design & Tillgänglighet</h3>
+            <p>Jag prioriterade en "clean" design med hög kontrast (98/100 i Lighthouse). Genom att använda WebP-bilder och undvika externa typsnitt uppnådde jag en prestanda-score på 99/100.</p>
+            <h3 class="h6 fw-bold">Lärdomar & Förbättringar</h3>
+            <p>Under arbetet insåg jag vikten av localStorage för att bevara användarens inställningar mellan sidbyten. Vidareutveckling skulle kunna inkludera mer avancerad SEO och interaktiva kunskapstest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
