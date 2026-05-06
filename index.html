@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Victor Cronelds professionella portfolio och CV. Utforskade projekt inom webbutveckling, digital etik och interaktiva lösningar.">
+        <meta name="description" content="Victor Cronelds portfolio - Webbprojekt, CV och kontaktinformation.">
         <title>Victor Croneld - Professionellt CV</title>
         
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
@@ -127,15 +127,15 @@
                     <form action="https://formspree.io/f/mnjlelyl" method="POST" id="contactForm" class="p-4 rounded shadow-sm border">
                         <div class="mb-3">
                             <label for="name" class="form-label fw-bold">Namn</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Ditt namn" required>
+                            <input type="text" class="form-control" id="name" name="name" autocomplete="Ditt namn" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label fw-bold">E-post</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="namn@exempel.se" required>
+                            <input type="email" class="form-control" id="email" name="email" autocomplete="namn@exempel.se" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label fw-bold">Meddelande</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Skriv ditt meddelande här..." required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" autocomplete="Skriv ditt meddelande här..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Skicka meddelande</button>
                     </form>
@@ -154,7 +154,7 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="modalProjekt2" tabindex="-1" aria-labelledby="modal2Title" aria-hidden="true">
+    <div class="modal fade" id="modalProjekt2" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal2Title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content text-dark">
             <div class="modal-header border-0">
@@ -173,7 +173,7 @@
         </div>
       </div>
   
-      <div class="modal fade" id="modalProjekt3" tabindex="-1" aria-labelledby="modal3Title" aria-hidden="true">
+      <div class="modal fade" id="modalProjekt3" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal2Title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content text-dark">
             <div class="modal-header border-0">

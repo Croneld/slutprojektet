@@ -36,3 +36,5 @@ window.addEventListener('pageshow', (event) => {
         }
     }
 });
+
+setTimeout(() => { myFunction(); }, 1000);
