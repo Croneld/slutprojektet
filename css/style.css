@@ -1,129 +1,129 @@
-:root {
-  --primary-color: #0056b3;
-  --secondary-color: #6c757d;
-  --dark-bg: #121212;
-  --card-bg: #ffffff;
-  --text-main: #2d3436;
-  --soft-blue: #f0f7ff;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-main);
-  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-h1, h2, h3, .navbar-brand {
-  color: #0a2351;
-}
-
-#hem {
-  background: linear-gradient(135deg, var(--soft-blue) 0%, #ffffff 100%);
-  padding: 140px 0 80px 0;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 section {
   padding: 80px 0;
 }
 
+.navbar {
+  transition: background-color 0.2s;
+}
+
 .hero-img-container {
-  display: inline-block;
-  max-width: 700px;
-  width: 100%;
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.profile-img {
+.hero-img-container img {
   width: 100%;
-  height: auto;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  border: none;
-  padding: 12px 35px;
-  border-radius: 50px;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .card {
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, background-color 0.2s;
+  height: 100%;
+  border: 1px solid #dee2e6;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+#contactForm {
+  background-color: #ffffff;
+  transition: all 0.2s;
 }
 
 body.bg-dark {
-  background-color: var(--dark-bg) !important;
+  background-color: #121212 !important;
   color: #e0e0e0 !important;
 }
 
-body.bg-dark .bg-light,
-body.bg-dark #hem {
-  background: #1e1e1e !important;
+body.bg-dark .navbar {
+  background-color: #1f1f1f !important;
 }
 
-body.bg-dark .card,
-body.bg-dark .modal-content,
-body.bg-dark .navbar,
-body.bg-dark aside div,
-body.bg-dark form {
-  background-color: #252525 !important;
-  color: #fff !important;
+body.bg-dark .nav-link, 
+body.bg-dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+body.bg-dark #fontIncrease, 
+body.bg-dark #fontDecrease {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+body.bg-dark #fontIncrease:hover, 
+body.bg-dark #fontDecrease:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.bg-dark #contactForm {
+  background-color: #1f1f1f !important;
   border-color: #333 !important;
+  color: #ffffff !important;
 }
 
-body.bg-dark .navbar-toggler {
-  filter: invert(1);
+body.bg-dark .form-control {
+  background-color: #2c2c2c !important;
+  border: 1px solid #444 !important;
+  color: #ffffff !important;
 }
 
-body.bg-dark h1, 
-body.bg-dark h2, 
-body.bg-dark h3, 
-body.bg-dark .navbar-brand,
+body.bg-dark .form-control:focus {
+  background-color: #333 !important;
+  border-color: #0d6efd !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+body.bg-dark .form-control::placeholder {
+  color: #aaaaaa !important;
+}
+
 body.bg-dark label {
-  color: #74b9ff !important;
+  color: #ffffff !important;
 }
 
-body.bg-dark .nav-link {
-  color: #e0e0e0 !important;
+body.bg-dark .card {
+  background-color: #1f1f1f;
+  border-color: #333;
+  color: #e0e0e0;
+}
+
+body.bg-dark .bg-light {
+  background-color: #1a1a1a !important;
+}
+
+body.bg-dark .hero-img-container img {
+  border-color: #333;
+}
+
+body.bg-dark .modal-content {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
 }
 
 body.bg-dark .btn-close {
   filter: invert(1);
-}
-
-body.bg-dark input, 
-body.bg-dark textarea {
-  background-color: #333 !important;
-  color: white !important;
-  border: 1px solid #444 !important;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 60px 15px;
-  }
-  #hem {
-    padding-top: 120px;
-  }
-  .display-4 {
-    font-size: 2.2rem;
-  }
-  .hero-img-container {
-    max-width: 400px;
-    margin-bottom: 25px;
-  }
-  .navbar-nav {
-    padding-top: 15px;
-  }
 }

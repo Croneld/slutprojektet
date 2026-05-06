@@ -1,38 +1,38 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeBtn = document.getElementById('darkModeToggle');
+    const fontIncrease = document.getElementById('fontIncrease');
+    const fontDecrease = document.getElementById('fontDecrease');
+    let currentFontSize = 100;
 
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('bg-dark');
-    darkModeToggle.textContent = 'Light Mode';
-}
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('bg-dark');
+    }
 
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('bg-dark');
-    const isDark = body.classList.contains('bg-dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    darkModeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-});
+    darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('bg-dark');
+        const isDark = document.body.classList.contains('bg-dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 
-let currentFontSize = 100;
-function changeFontSize(action) {
-    if (action === 'increase' && currentFontSize < 150) currentFontSize += 10;
-    else if (action === 'decrease' && currentFontSize > 80) currentFontSize -= 10;
-    document.body.style.fontSize = currentFontSize + "%";
-}
-
-document.querySelectorAll('.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetElement = document.querySelector(this.getAttribute('href'));
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
-
-            const navbarCollapse = document.getElementById('navbarNav');
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {toggle: false});
-            bsCollapse.hide();
+    fontIncrease.addEventListener('click', () => {
+        if (currentFontSize < 150) {
+            currentFontSize += 10;
+            document.documentElement.style.fontSize = currentFontSize + '%';
         }
     });
+
+    fontDecrease.addEventListener('click', () => {
+        if (currentFontSize > 75) {
+            currentFontSize -= 10;
+            document.documentElement.style.fontSize = currentFontSize + '%';
+        }
+    });
+});
+
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('bg-dark');
+        }
+    }
 });
